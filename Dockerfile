@@ -25,7 +25,6 @@ RUN  rm -rf /var/lib/apt/lists/* \
 COPY playbooks /playbooks
 # Install Ansible inventory file
 ADD ansible-hosts /etc/ansible/hosts
-
 # Copy Keys
 RUN mkdir /root/.ssh
 COPY keys/* /root/.ssh/
