@@ -1,0 +1,9 @@
+- hosts: '{{ hosts }}'
+  remote_user: '{{ user }}'
+  tasks:
+  - name: Get Docker Info
+    command: docker info
+  - name: Check Dns Resolution
+    command: ping -c 3 '{{ registry_host }}' 
+  - name: Get latest docker image from private repository
+    command: docker pull '{{ registry_host }}':'{{ registry_port}}'/'{{ container_url }}':'{{ tag }}' 
