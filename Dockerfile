@@ -30,3 +30,7 @@ COPY keys/* /root/.ssh/
 # Fix StrictHostKeyChecking
 RUN echo "StrictHostKeyChecking no \n \
 UserKnownHostsFile=/dev/null" > /root/.ssh/config
+
+#Install Galaxy Playbooks
+RUN ansible-galaxy install nsops.mongodb
+RUN ansible-galaxy install angstwad.docker_ubuntu

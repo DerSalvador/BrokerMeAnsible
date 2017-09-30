@@ -1,4 +1,4 @@
 - hosts: '{{ hosts }}'
   remote_user: '{{ user }}'
-  roles:
-    - angstwad.docker_ubuntu
+  role:
+    - { name: nsops.mongodb }
