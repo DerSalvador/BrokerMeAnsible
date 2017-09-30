@@ -27,3 +27,6 @@ ADD ansible-hosts /etc/ansible/hosts
 # Copy Keys
 RUN mkdir /root/.ssh
 COPY keys/* /root/.ssh/
+# Fix StrictHostKeyChecking
+RUN echo "StrictHostKeyChecking no \n \
+UserKnownHostsFile=/dev/null" > /root/.ssh/config

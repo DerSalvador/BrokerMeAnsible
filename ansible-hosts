@@ -2,3 +2,7 @@
 localhost ansible_connection=local
 [tools]
 10.128.2.69
+[production]
+192.241.160.163
+[staging]
+162.243.192.227
